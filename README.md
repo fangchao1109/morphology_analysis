@@ -10,17 +10,11 @@
 
 ## Overview
 
-This repository presents a portfolio case study of the AI system I led for a commercial hematology morphology analysis platform. The system was designed to support automated analysis of peripheral blood and bone marrow smear slides by combining microscope scanning, image-based region selection, cell detection, segmentation, classification, and structured analysis output for downstream visualization and reporting.
+This repository presents a portfolio case study of the AI system I led for a commercial hematology morphology analysis platform. Manual morphology review of peripheral blood and bone marrow smears is time-consuming and depends heavily on expert experience. The system was designed to support automated smear analysis by combining microscope scanning, image-based region selection, cell detection, segmentation, classification, and structured AI outputs for downstream visualization and reporting.
 
-The AI workflow uses a coarse-to-fine strategy: low-magnification preview and 10x scanning are used to identify suitable regions, while 100x images are acquired for detailed cell-level analysis. The AI modules were deployed as microservices and integrated with the device-side scanning workflow.
+Unlike a standalone image classification task, this system works as part of an automated microscope workflow. Low-magnification preview and 10x scanning are used to identify suitable regions, while 100x images are acquired for detailed cell-level analysis. The AI modules not only analyze captured images but also help guide where the device should scan next.
 
-
-## Product Context
-
-Manual morphology review of peripheral blood and bone marrow smears is time-consuming and depends heavily on expert experience. In this platform, AI works together with microscope hardware: it analyzes captured images and helps decide where the device should scan next.
-
-This makes the project different from a standalone image classification task. The system connects low-magnification scanning, high-magnification acquisition, cell-level analysis, and downstream visualization/reporting into one automated workflow.
-
+The AI components were deployed as microservices and integrated with the device-side scanning workflow, enabling the system to return scan-region decisions, cell-level predictions, and morphology analysis results to the downstream visualization and reporting system.
 
 ## System Workflow
 

@@ -61,11 +61,10 @@ On 100x images, the AI system performs cell-level analysis, including
 ## Performance and Deployment Optimization
 To improve throughput, the pipeline was organized as a multi-task system, allowing independent modules to run in parallel where possible. The deployment pipeline also used model compression, knowledge distillation, and TensorRT optimization to reduce inference latency while maintaining the required model accuracy.
 
-After optimization, the average AI analysis time was reduced from **0.24 s/image** to **0.11 s/image**. In deployment, AI inference was no longer the main bottleneck; the overall processing speed became primarily limited by the microscope hardware acquisition workflow.
-
+Improved AI analysis throughput from approximately **10 images per second to 20 images per second** through model compression and TensorRT-based optimization. After optimization, AI inference was no longer the main bottleneck, with overall processing speed primarily limited by the microscope image acquisition workflow.
 
 ## Data Scale
-The project involved **over 260,000 annotated cell instances**, including white blood cells, red blood cells, platelets, and megakaryocytes.
+The project involved **over 200,000 annotated cell instances**, including white blood cells, red blood cells, platelets, and megakaryocytes.
 
 ## My Involvement
 
